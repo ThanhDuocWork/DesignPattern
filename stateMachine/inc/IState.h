@@ -1,14 +1,13 @@
-#ifndef ISTATE_h
-#define ISTATE_h
-#include<iostream>
-#include<string>
-#include"Logger.h"
-class IState 
+#ifndef ISTATE_H
+#define ISTATE_H
+
+#include "Logger.h"
+
+class IState
 {
-    private:
-
-    public:
+public:
+    virtual ~IState() = default;
     virtual void action() = 0;
-
 };
-#endif
+
+#endif  // ISTATE_H

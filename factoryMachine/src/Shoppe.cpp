@@ -1,11 +1,9 @@
-#include"Shoppe.h"
+#include "Shoppe.h"
 
-Shoppe::Shoppe(){
+Shoppe::Shoppe() = default;
 
-}
-Shoppe::~Shoppe(){
+Shoppe::~Shoppe() = default;
 
-}
 void Shoppe::Delivery()
 {
     printLog_I("Shoppe Delivery!!");

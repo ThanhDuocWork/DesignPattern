@@ -1,12 +1,10 @@
-#include"StateCancel.h"
+#include "StateCancel.h"
 
-StateCancel::StateCancel(){
+StateCancel::StateCancel() = default;
 
-}
-StateCancel::~StateCancel(){
+StateCancel::~StateCancel() = default;
 
-}
 void StateCancel::action()
 {
-    printLog_I("StateCancel action!!");
+    printLog_W("Order has been canceled by the customer.");
 }

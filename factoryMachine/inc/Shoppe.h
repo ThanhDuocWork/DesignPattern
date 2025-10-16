@@ -1,15 +1,15 @@
 #ifndef SHOPPE_H
 #define SHOPPE_H
-#include"IFactory.h"
-#include"Logger.h"
+
+#include "IFactory.h"
 
 class Shoppe : public IFactory
 {
-    private:
-
-    public:
+public:
     Shoppe();
-    ~Shoppe();
+    ~Shoppe() override;
+
     void Delivery() override;
 };
-#endif
+
+#endif  // SHOPPE_H

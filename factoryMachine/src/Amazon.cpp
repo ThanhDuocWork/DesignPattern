@@ -1,11 +1,9 @@
-#include"Amazon.h"
+#include "Amazon.h"
 
-Amazon::Amazon(){
+Amazon::Amazon() = default;
 
-}
-Amazon::~Amazon(){
+Amazon::~Amazon() = default;
 
-}
 void Amazon::Delivery()
 {
     printLog_I("Amazon Delivery!!");
