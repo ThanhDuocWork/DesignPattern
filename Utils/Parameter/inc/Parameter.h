@@ -1,10 +1,12 @@
 #ifndef PARAMETER_H
 #define PARAMETER_H
+
 enum class OrderState
 {
-    PLACED, 
-    SHIPPED, 
-    DELIVERED, 
-    CANCELED  
+    PLACED,
+    SHIPPED,
+    DELIVERED,
+    CANCELED
 };
-#endif
+
+#endif  // PARAMETER_H

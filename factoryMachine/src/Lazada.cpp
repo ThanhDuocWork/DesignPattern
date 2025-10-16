@@ -1,12 +1,9 @@
-#include"Lazada.h"
+#include "Lazada.h"
 
+Lazada::Lazada() = default;
 
-Lazada::Lazada(){
+Lazada::~Lazada() = default;
 
-}
-Lazada::~Lazada(){
-
-}
 void Lazada::Delivery()
 {
     printLog_I("Lazada Delivery!!");

@@ -1,15 +1,15 @@
 #ifndef AMAZON_H
 #define AMAZON_H
-#include"IFactory.h"
-#include"Logger.h"
+
+#include "IFactory.h"
 
 class Amazon : public IFactory
 {
-    private:
-
-    public:
+public:
     Amazon();
-    ~Amazon();
+    ~Amazon() override;
+
     void Delivery() override;
 };
-#endif
+
+#endif  // AMAZON_H

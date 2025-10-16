@@ -1,12 +1,10 @@
-#include"StatePlace.h"
+#include "StatePlace.h"
 
-StatePlace::StatePlace ()
+StatePlace::StatePlace() = default;
+
+StatePlace::~StatePlace() = default;
+
+void StatePlace::action()
 {
-}
-StatePlace::~StatePlace ()
-{
-}
-void StatePlace::action ()
-{
-    printLog_I ("StatePlace action!!");
+    printLog_I("Order has been placed and is awaiting processing.");
 }

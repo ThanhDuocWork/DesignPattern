@@ -1,11 +1,10 @@
 #include "StateDelivered.h"
-StateDelivery::StateDelivery ()
+
+StateDelivered::StateDelivered() = default;
+
+StateDelivered::~StateDelivered() = default;
+
+void StateDelivered::action()
 {
-}
-StateDelivery::~StateDelivery ()
-{
-}
-void StateDelivery::action ()
-{
-    printLog_I ("StateDelivery action!!");
+    printLog_I("Order has been successfully delivered to the customer.");
 }

@@ -1,16 +1,15 @@
 #ifndef STATE_CANCEL_H
 #define STATE_CANCEL_H
-#include"IState.h"
-#include"Logger.h"
 
-class StateCancel : public IState 
+#include "IState.h"
+
+class StateCancel : public IState
 {
-    private:
-
-    public:
+public:
     StateCancel();
-    ~StateCancel();
+    ~StateCancel() override;
+
     void action() override;
 };
 
-#endif
+#endif  // STATE_CANCEL_H

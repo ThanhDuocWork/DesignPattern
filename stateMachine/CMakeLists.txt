@@ -2,29 +2,22 @@ cmake_minimum_required(VERSION 3.0)
 project(stateMachine)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Source project
-set(
-    SOURCES
+set(SOURCES
     src/StateCancel.cpp
     src/StateDelivered.cpp
     src/StatePlace.cpp
+    src/StateShipped.cpp
+    src/tableState.cpp
 )
 
-# add lib Utils
-# add_subdirectory(Utils)
+add_library(stateMachine STATIC ${SOURCES})
 
-# add path include
-include_directories(
-    ./inc
+target_include_directories(stateMachine
+    PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/inc
+        ${CMAKE_SOURCE_DIR}/Utils/Parameter/inc
 )
 
-# Create executable
-# add_executable(project ${SOURCES})
-
-add_library(stateMachine SHARED
-    ${SOURCES}
-)
-# Linking lib Utils
 target_link_libraries(stateMachine PUBLIC Utils)

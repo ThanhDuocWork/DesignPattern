@@ -1,19 +1,18 @@
 cmake_minimum_required(VERSION 3.0)
 project(Utils)
 
-set(
-    SOURCES
+set(SOURCES
     Logger/src/Logger.cpp
 )
 
-add_library(Utils SHARED ${SOURCES})
-add_definitions(-std=c++17)
+add_library(Utils STATIC ${SOURCES})
 
-target_include_directories(
-    Utils PUBLIC 
-    ${CMAKE_CURRENT_SOURCE_DIR}/Logger/inc
+target_include_directories(Utils
+    PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/Logger/inc
+        ${CMAKE_CURRENT_SOURCE_DIR}/Parameter/inc
 )
 
-target_link_libraries(Utils PUBLIC )
+target_compile_features(Utils PUBLIC cxx_std_17)
 
-install(TARGETS Utils DESTINATION ${CMAKE_SOURCE_DIR})
+target_compile_definitions(Utils PUBLIC _STD_LOG_)

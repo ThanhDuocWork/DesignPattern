@@ -1,15 +1,15 @@
 #ifndef STATE_PLACE_H
 #define STATE_PLACE_H
-#include"IState.h"
-#include"Logger.h"
 
-class StatePlace : public IState 
+#include "IState.h"
+
+class StatePlace : public IState
 {
-    private:
-
-    public:
+public:
     StatePlace();
-    ~StatePlace();
+    ~StatePlace() override;
+
     void action() override;
 };
-#endif
+
+#endif  // STATE_PLACE_H

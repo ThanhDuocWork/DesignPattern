@@ -1,16 +1,15 @@
 #ifndef LAZADA_H
 #define LAZADA_H
+
 #include "IFactory.h"
-#include"Logger.h"
 
 class Lazada : public IFactory
 {
-    private:
-
-    public:
+public:
     Lazada();
-    ~Lazada();
+    ~Lazada() override;
+
     void Delivery() override;
 };
 
-#endif
+#endif  // LAZADA_H
